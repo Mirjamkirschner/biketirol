@@ -73,10 +73,18 @@ controlElevation.load("data/etappe8.gpx")
 //Pulldown für Navigation
 let pulldown = document.querySelector("#pulldown");
 for (let etappe of ETAPPEN) {
-    console.log(etappe);
+    //console.log(etappe);
     let status = "";
     if (status.nr =="8"){
         status = "selected"
     }
     pulldown.innerHTML += `<option ${status} value="${etappe.user}">Etappe ${etappe.nr}: ${etappe.etappe}</option>`
+}
+
+// Auf Änderungen im Pulldown reagieren
+pulldown.onchange = function(evt) {
+    //console.log(pulldown.value);
+    let url = `https://${pulldown.value}.github.io/biketirol/`;
+    console.log(url);
+    window.location.href = url;
 }
