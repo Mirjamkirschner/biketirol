@@ -65,7 +65,7 @@ let controlElevation = L.control.elevation({
   height: 300,
   theme: "bike-tirol"
 }).addTo(map);
-controlElevation.load("data/etappe8.gpx")
+controlElevation.load("./data/etappe8.gpx")
 
 //let profileDiv = document.querySelector("#profile");
 //profileDiv.innerHTML = "Sepp"; 
